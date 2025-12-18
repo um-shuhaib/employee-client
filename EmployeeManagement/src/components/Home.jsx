@@ -8,7 +8,6 @@ import { toast } from 'react-toastify'
 
 function Home() {
 
-    const navigate=useNavigate()
 
     const [employee, setEmployee] = useState([])
     useEffect(() => {
@@ -56,7 +55,7 @@ function Home() {
                                 <td>{emp.email}</td>
                                 <td>{emp.salery}</td>
                                 <td>
-                                    <Link to={'edit/${emp.id}'} className='btn btn-primary'>Update</Link>
+                                    <Link to={`edit/${emp.id}`} className='btn btn-primary'>Update</Link>
                                     <Link onClick={()=>{deleteEmployee(emp.id)}} className='btn btn-Danger'>Delete</Link>
                                 </td>
                             </tr>
